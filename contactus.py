@@ -25,5 +25,5 @@ def callus():
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
-    local_css("F:\streamlit webpage\style\style.css.txt")
+    local_css("style\style.css.txt")
 

@@ -32,7 +32,7 @@ selected = option_menu(
     menu_title=None,
 
     orientation="horizontal",
-    img = st.image("Images/logo.jpg", use_column_width='Never',width=100),
+
     options=["Home", "Live pricing", "Basic Info",
              "Trading tips", "Comparison", "About Us","Contact us"],
     default_index=0
