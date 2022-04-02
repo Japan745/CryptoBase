@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import contactus
 import About_us
 import home
+import live_pricing
 base = "dark"
 
 st.set_page_config(
@@ -39,9 +40,11 @@ selected = option_menu(
 )
 
 if selected == "Home":
-    home.home()
+    #home.home()
+    st.title("This is home page")
 elif selected == "Live pricing":
-    st.title("This is live pricing section")
+    live_pricing.live_price()
+    #st.title("This is live pricing section")
 elif selected == "Basic Info":
     st.title("This is Basic Info page")
 elif selected == "Trading tips":
