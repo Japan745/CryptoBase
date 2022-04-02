@@ -30,11 +30,7 @@ def home():
                 fig = (df['Adj Close'].plot())
                 st.plotly_chart(fig.figure, use_container_width=True)
 
-        with st.form(key='my_form'):
-                crypto = st.selectbox('Select Cryptocurrency', ['BTC', 'ETH', 'XLM','USDT', 'BCH','LTC','DOT','DOG','ADA','SHI'])
-                start = st.date_input('Start')
-                end = st.date_input('End')
-                submit_button = st.form_submit_button(label='Submit')
+
 
         if submit_button:
                 aus()
