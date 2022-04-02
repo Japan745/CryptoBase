@@ -3,16 +3,19 @@ import pandas as pd
 import cryptocompare
 import datetime
 import time
+import matplotlib.pyplot as plt
+from datetime import datetime
 
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 def live_price():
+
 
     def get_crypto_price(cryptocurrency, currency):
         return cryptocompare.get_price(cryptocurrency, currency)[cryptocurrency][currency]
 
     def animate(i,crypto):
 
-        df2 = pd.DataFrame([get_crypto_price(crypto, 'CAD')], index=[datetime.datetime.now()],columns=[' '])
+        df2 = pd.DataFrame([get_crypto_price(crypto, 'CAD')], index=[datetime.now()],columns=[' '])
 
         my_chart.add_rows(df2)
 
@@ -23,7 +26,7 @@ def live_price():
 
     if submit_button:
         if crypto == "BTC":
-            df1 = pd.DataFrame([get_crypto_price('BTC', 'CAD')], index=[datetime.datetime.now()], columns=['Bitcoin (CAD)'])
+            df1 = pd.DataFrame([get_crypto_price('BTC', 'CAD')], index=[datetime.now()], columns=['Bitcoin (CAD)'])
 
 
             my_chart = st.line_chart(df1)
@@ -43,7 +46,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "XLM":
-            df1 = pd.DataFrame([get_crypto_price('XLM', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('XLM', 'CAD')], index=[datetime.now()],
                                columns=['XLM (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -53,7 +56,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "USDT":
-            df1 = pd.DataFrame([get_crypto_price('USDT', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('USDT', 'CAD')], index=[datetime.now()],
                                columns=['USDT (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -63,7 +66,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "BCH":
-            df1 = pd.DataFrame([get_crypto_price('BCH', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('BCH', 'CAD')], index=[datetime.now()],
                                columns=['Bitcoin Cash (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -73,7 +76,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "LTC":
-            df1 = pd.DataFrame([get_crypto_price('LTC', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('LTC', 'CAD')], index=[datetime.now()],
                                columns=['Litecoin (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -83,7 +86,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "DOT":
-            df1 = pd.DataFrame([get_crypto_price('DOT', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('DOT', 'CAD')], index=[datetime.now()],
                                columns=['Polkadot (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -93,7 +96,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "DOGE":
-            df1 = pd.DataFrame([get_crypto_price('DOGE', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('DOGE', 'CAD')], index=[datetime.now()],
                                columns=['Dogecoin (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -103,7 +106,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "ADA":
-            df1 = pd.DataFrame([get_crypto_price('ADA', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('ADA', 'CAD')], index=[datetime.now()],
                                columns=['Cardona (CAD)'])
 
             my_chart = st.line_chart(df1)
@@ -113,7 +116,7 @@ def live_price():
                 time.sleep(2)
 
         if crypto == "SHIB":
-            df1 = pd.DataFrame([get_crypto_price('SHIB', 'CAD')], index=[datetime.datetime.now()],
+            df1 = pd.DataFrame([get_crypto_price('SHIB', 'CAD')], index=[datetime.now()],
                                columns=['ShibaInu coin (CAD)'])
 
             my_chart = st.line_chart(df1)
