@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import contactus
 import About_us
 import home
+import trading_tips
 import live_pricing
 base = "dark"
 
@@ -34,8 +35,8 @@ selected = option_menu(
 
     orientation="horizontal",
 
-    options=["Home", "Live pricing", "Basic Info",
-             "Trading tips", "Comparison", "About Us","Contact us"],
+    options=["Home", "Live pricing", "Basic Info", "Prediction",
+             "Trading tips", "About Us", "Contact us"],
     default_index=0
 )
 
@@ -47,11 +48,12 @@ elif selected == "Live pricing":
     #st.title("This is live pricing section")
 elif selected == "Basic Info":
     st.title("This is Basic Info page")
+elif selected == "Prediction":
+    st.title("This is Basic Info page")
 elif selected == "Trading tips":
-    st.title("This is trading tips pAGE")
+    trading_tips.trading_tips()
+    #st.title("This is trading tips pAGE")
 elif selected == "About Us":
      About_us.aus()
-elif selected == "Comparison":
-    st.title("This is comparison page")
 elif selected == "Contact us":
     contactus.callus()
