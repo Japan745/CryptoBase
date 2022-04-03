@@ -6,19 +6,22 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
-
-
 st.set_page_config(layout="wide")
+
+with open('homeview') as f:
+   st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
 
 col1, col2, col3,= st.columns(3)
 
-
-col1.metric("BTC","$45000" )
-col1.text("This will go in FIRST column")
+#col1=[st.image('images/ravi.jpg',width=50),st.metric("BTC","$45000")]
+col1.image=('images/ravi.jpg')
+col1.metric("BTC","$45000")
 
 col2.metric("ETH", "25000")
 
-col3.metric("DOT","52000" )
+
 
 col4,col5,col6 =  st.columns(3)
 col4.metric("BTC","$45000")
