@@ -31,9 +31,9 @@ selected = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "
                          menu_icon="currency-bitcoin", default_index=0, orientation = "horizontal",
                          styles={
         "container": {"padding": "5!important", "background-color": "light-grey"},
-        "icon": {"color": "orange", "font-size": "25px"},
+        "icon": {"color": "#2ECC71", "font-size": "25px"},
         "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "light-grey"},
-        "nav-link-selected": {"background-color": "#02ab21"},
+        "nav-link-selected": {"background-color": "#2ECC71"},
 }
 )
 
