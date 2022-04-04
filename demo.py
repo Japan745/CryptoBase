@@ -32,7 +32,7 @@ selected = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "
                          styles={
         "container": {"padding": "5!important", "background-color": "light-grey"},
         "icon": {"color": "orange", "font-size": "25px"},
-        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "grey"},
         "nav-link-selected": {"background-color": "#02ab21"},
 }
 )
