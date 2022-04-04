@@ -1,3 +1,15 @@
+from tkinter import Image
+from PIL import Image
+import streamlit as st
+from streamlit_option_menu import option_menu
+import streamlit.components.v1 as html
+from  PIL import Image
+import numpy as np
+import cv2
+import pandas as pd
+from st_aggrid import AgGrid
+import plotly.express as px
+import io 
 import streamlit as st
 from streamlit_option_menu import option_menu
 import contactus
@@ -6,14 +18,20 @@ import basic_info
 import home
 import trading_tips
 import live_pricing
+<<<<<<< HEAD
+=======
 import prediction
 base = "dark"
+>>>>>>> b7ad90615381c4fe15093a0c6eee59ba0303b01d
 
+
+base = "dark"
+im = Image.open("images/ravi.jpg")
 st.set_page_config(
     # page_title="Ex-stream-ly Cool App",
-    page_icon="🧊",
+    page_icon=im,
     layout="wide",
-    initial_sidebar_state='auto'
+    initial_sidebar_state="auto",
     # initial_sidebar_state="expanded",
     # menu_items={
     #     'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -59,3 +77,10 @@ elif selected == "About Us":
      About_us.aus()
 elif selected == "Contact us":
     contactus.callus()
+
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+    local_css("dashboard")
