@@ -21,7 +21,7 @@ def live_price():
         if crypto == "BTC":
                 plot_spot = st.empty()
                 fig = go.FigureWidget()
-                fig.add_scatter()
+                fig.add_scatter(line=dict(color="#76D714"))
                 fig.update_layout(title="Bitcoin live price", xaxis_title="Time", yaxis_title= crypto +" Price in CAD ")
                 values = [get_crypto_price(crypto, 'CAD')]
                 times = []
@@ -37,7 +37,7 @@ def live_price():
         if crypto == "ETH":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -53,7 +53,7 @@ def live_price():
         if crypto == "XLM":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -69,7 +69,7 @@ def live_price():
         if crypto == "USDT":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -85,7 +85,7 @@ def live_price():
         if crypto == "BCH":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -101,7 +101,7 @@ def live_price():
         if crypto == "LTC":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -117,7 +117,7 @@ def live_price():
         if crypto == "DOT":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -133,7 +133,7 @@ def live_price():
         if crypto == "DOGE":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -149,7 +149,7 @@ def live_price():
         if crypto == "ADA":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
@@ -165,7 +165,7 @@ def live_price():
         if crypto == "SHIB":
             plot_spot = st.empty()
             fig = go.FigureWidget()
-            fig.add_scatter()
+            fig.add_scatter(line=dict(color="#76D714"))
             fig.update_layout(title=crypto + " live price", xaxis_title="Time", yaxis_title=crypto + " Price in CAD ")
             values = [get_crypto_price(crypto, 'CAD')]
             times = []
