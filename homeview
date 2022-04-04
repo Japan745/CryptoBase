@@ -1,4 +1,5 @@
 div.css-1r6slb0{
+    font-color: black;
     background-color: #D6DBDF  ;
     padding: 15px 15px 40px 40px;
     margin-bottom: 10px
@@ -11,10 +12,12 @@ div.css-1r6slb0{
     }
 
 div.css-1xarl3l {
+    color: black;
     font-size: 0.25rem;
     padding-bottom: 1.25rem;
 }
 div.css-1ht1j8u {
+    color: black;
     font-size: 40px;
     color: rgb(49, 51, 63);
     height: auto;
@@ -26,3 +29,14 @@ div.css-1ht1j8u {
     align-items: bottom;
     margin-bottom: 12px;
     }
+
+.css-10trblm {
+    position: relative;
+    flex: 1 1 0%;
+    margin-left: calc(3rem);
+    color: red;
+}
+b, strong {
+    font-weight: 600;
+    color: black;
+}

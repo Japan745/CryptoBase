@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 import contactus
 import About_us
 import basic_info
-import home
+import home1
 import trading_tips
 import live_pricing
 import prediction
@@ -39,7 +39,7 @@ selected = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "
 
 if selected == "Home":
     #home.home()
-    st.title("This is home page")
+    home1.home()
 elif selected == "Live pricing":
     live_pricing.live_price()
     #st.title("This is live pricing section")
