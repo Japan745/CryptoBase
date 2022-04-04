@@ -34,7 +34,7 @@ div.css-1ht1j8u {
     position: relative;
     flex: 1 1 0%;
     margin-left: calc(3rem);
-
+    color: red;
 }
 b, strong {
     font-weight: 600;
