@@ -54,3 +54,11 @@ elif selected == "About Us":
      About_us.aus()
 elif selected == "Contact us":
     contactus.callus()
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden; }
+        footer {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)

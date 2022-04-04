@@ -1,18 +1,18 @@
 div.css-1r6slb0{
-    background-color: #D7DBDD;
-    padding: 0px 20px 20px;
+    background-color: #D6DBDF  ;
+    padding: 15px 15px 40px 40px;
     margin-bottom: 10px
-    border: 3px solid black;
+    border:0;
     border-radius : 10px;
-    outline: 4px outset tomato;
+    outline: 0;
     box-sizing: border-box;
     border-style: solid;
     border-width: 0;
     }
 
 div.css-1xarl3l {
-    font-size: 2.25rem;
-    padding-bottom: 3.25rem;
+    font-size: 0.25rem;
+    padding-bottom: 1.25rem;
 }
 div.css-1ht1j8u {
     font-size: 40px;
