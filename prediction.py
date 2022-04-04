@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import statsmodels.api as sm
 from datetime import datetime
-
+import time
+import requests
+from streamlit_lottie import st_lottie_spinner
 import ada
 import bch
 import bit
@@ -19,6 +21,15 @@ import xlm
 
 def get_prediction():
 
+    def load_lottieurl(url: str):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
+
+    lottie_url = "https://assets3.lottiefiles.com/private_files/lf30_h4qnjuax.json"
+    lottie_json = load_lottieurl(lottie_url)
+
     st.warning(
         "NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your reference so it doesn't guarantee future exact values."
         "Please do a research before taking any further decision based on this forecasted values.")
@@ -31,23 +42,33 @@ def get_prediction():
             "page. Thank you.")
     if submit_button:
         if crypto == "BTC":
-            bit.get_bit()
+            with st_lottie_spinner(lottie_json):
+                bit.get_bit()
         if crypto == "ETH":
-            eth.get_eth()
+            with st_lottie_spinner(lottie_json):
+                eth.get_eth()
         if crypto == "XLM":
-            xlm.get_xlm()
+            with st_lottie_spinner(lottie_json):
+                xlm.get_xlm()
         if crypto == "USDT":
-            usdt.get_usdt()
+            with st_lottie_spinner(lottie_json):
+                usdt.get_usdt()
         if crypto == "BCH":
-            bch.get_bch()
+            with st_lottie_spinner(lottie_json):
+                bch.get_bch()
         if crypto == "LTC":
-            ltc.get_ltc()
+            with st_lottie_spinner(lottie_json):
+                ltc.get_ltc()
         if crypto == "DOT":
-            dot.get_dot()
+            with st_lottie_spinner(lottie_json):
+                dot.get_dot()
         if crypto == "DOGE":
-            doge.get_doge()
+            with st_lottie_spinner(lottie_json):
+                doge.get_doge()
         if crypto == "ADA":
-            ada.get_ada()
+            with st_lottie_spinner(lottie_json):
+                ada.get_ada()
         if crypto == "SHIB":
-            shib.get_shib()
+            with st_lottie_spinner(lottie_json):
+                shib.get_shib()
 
