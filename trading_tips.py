@@ -5,7 +5,7 @@ import pandas as pd
 
 
 def trading_tips():
-    st.warning("NOTE :-  The Predicted values of cryptocurrencies are forecasted and are for your reference so it doesn't guarantee future values."
+    st.warning("NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your reference so it doesn't guarantee future exact values."
                "Please do a research before taking any further decision based on this forecasted values.")
 
     with st.form(key='my_form'):
