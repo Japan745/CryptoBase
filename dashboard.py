@@ -18,11 +18,11 @@ import basic_info
 import home
 import trading_tips
 import live_pricing
-<<<<<<< HEAD
-=======
+#<<<<<<< HEAD
+#=======
 import prediction
 base = "dark"
->>>>>>> b7ad90615381c4fe15093a0c6eee59ba0303b01d
+#>>>>>>> b7ad90615381c4fe15093a0c6eee59ba0303b01d
 
 
 base = "dark"

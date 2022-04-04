@@ -26,7 +26,7 @@ st.set_page_config(
     initial_sidebar_state="auto",)
 
 
-choose = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "Prediction", "Trading tips","About Us","Contact us"],
+selected = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "Prediction", "Trading tips","About Us","Contact us"],
                          icons=['house', 'activity', 'info', 'book','app-indicator','person lines fill','mailbox'],
                          menu_icon="currency-bitcoin", default_index=0, orientation = "horizontal",
                          styles={
