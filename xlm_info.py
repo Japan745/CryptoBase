@@ -67,7 +67,7 @@ def get_xlm_info():
 
     data = yf.download("XLM-CAD")
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=list(data.index), y=list(data['Adj Close'])))
+    fig.add_trace(go.Scatter(x=list(data.index), y=list(data['Adj Close']),line=dict(color="#76D714")))
     '''fig.add_trace(go.Candlestick(x=data.index,
                                  open=data['Open'],
                                  high=data['High'],

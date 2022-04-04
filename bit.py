@@ -36,6 +36,7 @@ def get_bit():
     fig = px.line(x=pred_uc.predicted_mean.index, y=pred_uc.predicted_mean.values,
                   labels={'x': 'Date', 'y': 'Canadian Dollars'}, title="Bitcoin (BTC) forecasting",
                   markers=True)
+    fig.update_traces(line_color='#76D714', line_width=5)
     with st.expander("View", True):
         st.plotly_chart(fig, use_container_width=True)
     # printing one week values
@@ -43,5 +44,6 @@ def get_bit():
     fig = px.line(x=One_week_values.index, y=One_week_values.values,
                   labels={'x': 'Date', 'y': 'Canadian Dollars'}, title="Bitcoin (BTC) forecasting",
                   markers=True)
+    fig.update_traces(line_color='#76D714', line_width=5)    #00ff00
     with st.expander("View", True):
         st.plotly_chart(fig, use_container_width=True)
