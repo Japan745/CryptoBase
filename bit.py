@@ -10,8 +10,6 @@ import statsmodels.api as sm
 def get_bit():
     bitcoin = yf.download('BTC-CAD')
     bitcoin = bitcoin.drop(['Open', 'High', 'Low', 'Close', 'Volume'], axis=1)
-    decomposition = sm.tsa.seasonal_decompose(bitcoin, model='additive')
-    # plt = decomposition.plot()
     modelhigh = sm.tsa.statespace.SARIMAX(bitcoin['Adj Close'],
                                           order=(0, 1, 1),
                                           seasonal_order=(1, 1, 1, 12),
@@ -31,7 +29,6 @@ def get_bit():
     ax.set_xlabel('Date')
     ax.set_ylabel('CAD price')
     plt.legend()
-    space = st.pyplot
     with st.expander("Wanna see (All time graph + predicted graph)"):
         st.pyplot(plt, use_container_width=True)
     # printing 6 months values
