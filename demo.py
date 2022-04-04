@@ -1,6 +1,7 @@
 import contactus
 import About_us
 import basic_info
+import home
 import home1
 import trading_tips
 import live_pricing
@@ -31,8 +32,8 @@ selected = option_menu(
 )
 
 if selected == "Home":
-    #home.home()
-    home1.home()
+    home.get_home()
+    #home1.home()
 elif selected == "Live pricing":
     live_pricing.live_price()
     #st.title("This is live pricing section")
