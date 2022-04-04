@@ -2,9 +2,11 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import contactus
 import About_us
+import basic_info
 import home
 import trading_tips
 import live_pricing
+import prediction
 base = "dark"
 
 st.set_page_config(
@@ -47,9 +49,9 @@ elif selected == "Live pricing":
     live_pricing.live_price()
     #st.title("This is live pricing section")
 elif selected == "Basic Info":
-    st.title("This is Basic Info page")
+    basic_info.get_basic_info()
 elif selected == "Prediction":
-    st.title("This is Basic Info page")
+    prediction.get_prediction()
 elif selected == "Trading tips":
     trading_tips.trading_tips()
     #st.title("This is trading tips pAGE")

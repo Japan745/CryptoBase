@@ -3,8 +3,8 @@
 import streamlit as st  # pip install streamlit
 
 def callus():
-    st.header(":mailbox: contact us from here!")
-    st.write("we will reach out at you as soon as possible")
+    st.header(":mailbox: Contact us from here!")
+    st.write("We will reach out to you as soon as possible. Thank you. ")
 
 
     contact_form = """
