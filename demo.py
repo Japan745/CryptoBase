@@ -26,11 +26,11 @@ st.set_page_config(
     initial_sidebar_state="auto",)
 
 
-choose = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "Prediction", "Trading tips","About Us","Contact us"],
+selected = option_menu("Crypto future", ["Home", "Live pricing", "Basic Info", "Prediction", "Trading tips","About Us","Contact us"],
                          icons=['house', 'activity', 'info', 'book','app-indicator','person lines fill','mailbox'],
                          menu_icon="currency-bitcoin", default_index=0, orientation = "horizontal",
                          styles={
-        "container": {"padding": "5!important", "background-color": "#fafafa"},
+        "container": {"padding": "5!important", "background-color": "grey"},
         "icon": {"color": "orange", "font-size": "25px"},
         "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
         "nav-link-selected": {"background-color": "#02ab21"},
