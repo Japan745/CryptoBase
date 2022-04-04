@@ -22,7 +22,7 @@ my_chart = st.line_chart(df1)
 for i in range(100) :
 
     animate(i)
-    time.sleep(10)
+    time.sleep(20)
 
 
 
