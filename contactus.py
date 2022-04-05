@@ -19,6 +19,8 @@ def callus():
 
     st.markdown(contact_form, unsafe_allow_html=True)
 
+
+
     # Use Local CSS File
     def local_css(file_name):
         with open(file_name) as f:
@@ -26,4 +28,15 @@ def callus():
 
 
     local_css("style/style.css.txt")
+    st.write("    ")
+    st.write("    ")
+    st.write("    ")
+    st.info("Future work")
+    with st.expander("See explanation"):
+        st.subheader("Upcoming currencies")
+        st.write(1, "  Terra (LUNA)")
+        st.write(2, "  Solana (SOL)")
+        st.write(3, "  XRP (XRP)")
+        st.write(4, "  Avalanche (AVAX)")
+        st.write(5, "  Ethereum Classic (ETC)")
 
