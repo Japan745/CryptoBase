@@ -32,7 +32,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['1']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['1']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.bit_color = volume_ch
-                cl1,col1, col2, col3,col4,g1 = st.columns([0.5,2,2,3,3,2])
+                cl1,col1, col2, col3,col4,g1 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl1:
                         st.write(1)
@@ -60,7 +60,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['1027']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['1027']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.eth_color = volume_ch
-                cl2,col5, col6, col7,col8,g2 = st.columns([0.5,2,2,3,3,2])
+                cl2,col5, col6, col7,col8,g2 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl2:
                         #cryptographs.get_eth_graph()
@@ -89,7 +89,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['512']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['512']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.xlm_color = volume_ch
-                cl3,col9, col10, col11,col12,g3 = st.columns([0.5,2,2,3,3,2])
+                cl3,col9, col10, col11,col12,g3 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl3:
                         st.write(3)
@@ -117,7 +117,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['825']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['825']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.usdt_color = volume_ch
-                cl4,col13, col14, col15,col16,g4 = st.columns([0.5,2,2,3,3,2])
+                cl4,col13, col14, col15,col16,g4 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl4:
                         st.write(4)
@@ -145,7 +145,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['1831']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['1831']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.bch_color = volume_ch
-                cl5,col17, col18, col19,col20,g5 = st.columns([0.5,2,2,3,3,2])
+                cl5,col17, col18, col19,col20,g5 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl5:
                         st.write(5)
@@ -173,7 +173,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['2']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['2']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.ltc_color = volume_ch
-                cl6,col21, col22, col23,col24,g6 = st.columns([0.5,2,2,3,3,2])
+                cl6,col21, col22, col23,col24,g6 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl6:
                         st.write(6)
@@ -201,7 +201,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['6636']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['6636']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.dot_color = volume_ch
-                cl7,col25, col26, col27,col28,g7 = st.columns([0.5,2,2,3,3,2])
+                cl7,col25, col26, col27,col28,g7 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl7:
                         st.write(7)
@@ -229,7 +229,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['74']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['74']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.doge_color = volume_ch
-                cl8,col29, col30, col31,col32,g8 = st.columns([0.5,2,2,3,3,2])
+                cl8,col29, col30, col31,col32,g8 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl8:
                         st.write(8)
@@ -258,7 +258,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['2010']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['2010']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.ada_color = volume_ch
-                cl9,col33, col34, col35,col36,g9 = st.columns([0.5,2,2,3,3,2])
+                cl9,col33, col34, col35,col36,g9 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl9:
                         st.write(9)
@@ -287,7 +287,7 @@ def get_home():
                 volume = json.loads(response.text)['data']['5994']['quote']['CAD']['volume_24h']
                 volume_ch = json.loads(response.text)['data']['5994']['quote']['CAD']['volume_change_24h']
                 graph_color_decision.shib_color = volume_ch
-                cl10,col37, col38, col39,col40,g10 = st.columns([0.5,2,2,3,3,2])
+                cl10,col37, col38, col39,col40,g10 = st.columns([0.5,1.5,2,3,3,1.5])
 
                 with cl10:
                         st.write(10)
