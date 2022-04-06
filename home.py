@@ -10,7 +10,10 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
+
 def get_home():
+        with open('homeview') as f:
+                st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
         url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
         headers = {
                 'Accepts': 'application/json',
