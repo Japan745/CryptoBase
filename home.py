@@ -10,10 +10,7 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 import cryptographs
 import graph_color_decision
 
