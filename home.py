@@ -10,12 +10,11 @@ from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
-<<<<<<< HEAD
-=======
+
 import cryptographs
 import graph_color_decision
 
->>>>>>> c9f75164d56624563fb525af935cad160507d137
+
 
 def get_home():
         with open('homeview') as f:
