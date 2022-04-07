@@ -36,39 +36,40 @@ def get_prediction():
 
     with st.form(key='my_form'):
         crypto = st.selectbox('Select Cryptocurrency',
-                              ['BTC', 'ETH', 'XLM', 'USDT', 'BCH', 'LTC', 'DOT', 'DOGE', 'ADA', 'SHIB'])
+                              ['Bitcoin (BTC)', 'Ethereum (ETH)', 'Stellar (XLM)', 'Tether (USDT)', 'Bitcoin Cash (BCH)',
+                               'Litecoin (LTC)', 'Polkadot (DOT)', 'Dogecoin (DOGE)', 'Cardano (ADA)', 'Shiba Inu (SHIB)'])
         submit_button = st.form_submit_button(label='Submit')
     st.info("FYI : If you want customized forecasting like ( 3 months, 1 year, etc). Please email us by visiting contact us "
             "page. Thank you.")
     if submit_button:
-        if crypto == "BTC":
+        if crypto == "Bitcoin (BTC)":
             with st_lottie_spinner(lottie_json):
                 bit.get_bit()
-        if crypto == "ETH":
+        if crypto == "Ethereum (ETH)":
             with st_lottie_spinner(lottie_json):
                 eth.get_eth()
-        if crypto == "XLM":
+        if crypto == "Stellar (XLM)":
             with st_lottie_spinner(lottie_json):
                 xlm.get_xlm()
-        if crypto == "USDT":
+        if crypto == "Tether (USDT)":
             with st_lottie_spinner(lottie_json):
                 usdt.get_usdt()
-        if crypto == "BCH":
+        if crypto == "Bitcoin Cash (BCH)":
             with st_lottie_spinner(lottie_json):
                 bch.get_bch()
-        if crypto == "LTC":
+        if crypto == "Litecoin (LTC)":
             with st_lottie_spinner(lottie_json):
                 ltc.get_ltc()
-        if crypto == "DOT":
+        if crypto == "Polkadot (DOT)":
             with st_lottie_spinner(lottie_json):
                 dot.get_dot()
-        if crypto == "DOGE":
+        if crypto == "Dogecoin (DOGE)":
             with st_lottie_spinner(lottie_json):
                 doge.get_doge()
-        if crypto == "ADA":
+        if crypto == "Cardano (ADA)":
             with st_lottie_spinner(lottie_json):
                 ada.get_ada()
-        if crypto == "SHIB":
+        if crypto == "Shiba Inu (SHIB)":
             with st_lottie_spinner(lottie_json):
                 shib.get_shib()
 
