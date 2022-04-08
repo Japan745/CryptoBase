@@ -33,60 +33,61 @@ def trading_tips():
 
     with st.form(key='my_form'):
             crypto = st.selectbox('Select Cryptocurrency',
-                              ['BTC', 'ETH', 'XLM', 'USDT', 'BCH', 'LTC', 'DOT', 'DOGE', 'ADA', 'SHIB'])
+                              ['Bitcoin (BTC)', 'Ethereum (ETH)', 'Stellar (XLM)', 'Tether (USDT)', 'Bitcoin Cash (BCH)',
+                               'Litecoin (LTC)', 'Polkadot (DOT)', 'Dogecoin (DOGE)', 'Cardano (ADA)', 'Shiba Inu (SHIB)'])
             submit_button = st.form_submit_button(label='Submit')
 
     if submit_button:
 
-        if crypto == "BTC":
+        if crypto == "Bitcoin (BTC)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     bit_trading.get_bit_trading()
 
-        if crypto == "ETH":
+        if crypto == "Ethereum (ETH)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     eth_trading.get_eth_trading()
 
-        if crypto == "XLM":
+        if crypto == "Stellar (XLM)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     xlm_trading.get_xlm_trading()
 
-        if crypto == "USDT":
+        if crypto == "Tether (USDT)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     usdt_trading.get_usdt_trading()
 
-        if crypto == "BCH":
+        if crypto == "Bitcoin Cash (BCH)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     bch_trading.get_bch_trading()
 
-        if crypto == "LTC":
+        if crypto == "Litecoin (LTC)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     ltc_trading.get_ltc_trading()
 
-        if crypto == "DOT":
+        if crypto == "Polkadot (DOT)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     dot_trading.get_dot_trading()
 
 
-        if crypto == "DOGE":
+        if crypto == "Dogecoin (DOGE)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     doge_trading.get_doge_trading()
 
 
-        if crypto == "ADA":
+        if crypto == "Cardano (ADA)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     ada_trading.get_ada_trading()
 
 
-        if crypto == "SHIB":
+        if crypto == "Shiba Inu (SHIB)":
                 st.info("Info : If yellow line uppercrosses the line blue line means it's time to BUY and if yellow line lowercrosses the blue line means its time to SELL")
                 with st_lottie_spinner(lottie_json):
                     shib_trading.get_shib_trading()
