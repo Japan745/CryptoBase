@@ -29,6 +29,7 @@ def get_usdt():
             pred_uc.predicted_mean.plot(ax=ax, color='green', label='Forecast')
             ax.set_xlabel('Date')
             ax.set_ylabel('CAD price')
+            ax.patch.set_facecolor('white')
             plt.legend()
             #space = st.pyplot
             with st.expander("Wanna see (All time graph + predicted graph)"):

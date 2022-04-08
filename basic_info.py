@@ -1,5 +1,6 @@
 import streamlit as st
 
+import ada_info
 import bit_info
 import eth_info
 import xlm_info
@@ -22,19 +23,21 @@ def get_basic_info():
     if submit_button:
         if crypto == "Bitcoin (BTC)":
             bit_info.get_bit_info()
+        if crypto =="Cardano (ADA)":
+            ada_info.get_ada_info()
         if crypto == "Ethereum (ETH)":
             eth_info.get_eth_info()
         if crypto == "Stellar (XLM)":
             xlm_info.get_xlm_info()
-        if crypto == "LTC":
+        if crypto == "Litecoin (LTC)":
             lite_info.get_lite_info()
-        if crypto == "USDT":
+        if crypto == "Tether (USDT)":
             usdt_info.get_usdt_info()
-        if crypto == "DOT":
+        if crypto == "Polkadot (DOT)":
             dot_info.get_dot_info()
-        if crypto == "BCH":
+        if crypto == "Bitcoin Cash (BCH)":
             bch_info.get_bch_info()
-        if crypto == "DOGE":
+        if crypto == "Dogecoin (DOGE)":
             doge_info.get_doge_info()
-        if crypto == "SHIB":
+        if crypto == "Shiba Inu (SHIB)":
             shib_info.get_shib_info()

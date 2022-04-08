@@ -1,3 +1,5 @@
+import base64
+
 import matplotlib.pyplot as plt
 import yfinance as yf
 import streamlit as st
@@ -28,6 +30,7 @@ def get_ada():
             pred_uc.predicted_mean.plot(ax=ax, color='green', label='Forecast')
             ax.set_xlabel('Date')
             ax.set_ylabel('CAD price')
+            ax.patch.set_facecolor('white')
             plt.legend()
             #space = st.pyplot
             with st.expander("Wanna see (All time graph + predicted graph)"):
@@ -48,3 +51,4 @@ def get_ada():
             fig.update_traces(line_color='#76D714', line_width=5)
             with st.expander("View", True):
                 st.plotly_chart(fig, use_container_width=True)
+

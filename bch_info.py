@@ -88,3 +88,4 @@ def get_bch_info():
     )
     st.header("Bitcoin Cash All time graph")
     st.plotly_chart(fig, use_container_width=True)
+

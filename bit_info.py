@@ -89,17 +89,32 @@ def get_bit_info():
     st.header("Bitcoin All time graph")
     st.plotly_chart(fig, use_container_width=True)
 
+
+    st.header("Bitcoin White Paper")
+
     with open("bitcoin.pdf", "rb") as file:
         btn=st.download_button(
-        label="download white paper",
+        label="Click me! to download white paper",
         data=file,
         file_name="bitcoin.pdf",
         mime="application/octet-stream")
 
-    def show_pdf(file_path):
-        with open(file_path, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        pdf_display = f'<iframe src="bitcoin/pdf;base64,{base64_pdf}" width="800" height="800" type="bitcoin/pdf"></iframe>'
-        st.markdown(pdf_display, unsafe_allow_html=True)
 
-    show_pdf('bitcoin.pdf')
+    def st_display_pdf(pdf_file):
+        with open(pdf_file,"rb") as f:
+            base64_pdf=base64.b64encode(f.read()).decode('utf-8')
+        #pdf_display = f'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>'
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800" type="application/pdf"></iframe>'
+        st.markdown(pdf_display,unsafe_allow_html=True)
+
+
+    with st.expander(" 👁  Bitcoin white paper "):
+        st_display_pdf("bitcoin.pdf")
+
+    # def show_pdf(file_path):
+    #     with open(file_path, "rb") as f:
+    #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+    #     pdf_display = f'<iframe src="bitcoin/pdf;base64,{base64_pdf}" width="800" height="800" type="bitcoin/pdf"></iframe>'
+    #     st.markdown(pdf_display, unsafe_allow_html=True)
+    #
+    # show_pdf('bitcoin.pdf')

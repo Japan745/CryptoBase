@@ -1,3 +1,5 @@
+import base64
+
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
@@ -85,3 +87,22 @@ def get_dot_info():
     )
     st.header("Polkadot All time graph")
     st.plotly_chart(fig, use_container_width=True)
+
+    st.header("Polkadot White Paper")
+
+    with open("Polkadot-DOT-Whitepaper.pdf", "rb") as file:
+        btn = st.download_button(
+            label="Click me! to download white paper",
+            data=file,
+            file_name="Polkadot-DOT-Whitepaper.pdf",
+            mime="application/octet-stream")
+
+    def st_display_pdf(pdf_file):
+        with open(pdf_file, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        # pdf_display = f'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>'
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800" type="application/pdf"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+    with st.expander(" 👁  Polkadot white paper "):
+        st_display_pdf("Polkadot-DOT-Whitepaper.pdf")

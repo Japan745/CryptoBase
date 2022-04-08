@@ -22,12 +22,14 @@ def get_bit():
     pred.predicted_mean.plot(ax=ax, label='Forecasted', alpha=.2, figsize=(14, 7))
     pred_uc = resultshigh.get_forecast(steps=180)
     pred_ci = pred_uc.conf_int()
-    ax = bitcoin.plot(label='observed', color='Grey', figsize=(20, 8))
+    ax = bitcoin.plot(label='observed', color='grey', figsize=(20, 8))
     One_week_values = pred_uc.predicted_mean[:7]
     One_week_values = round(One_week_values, 2)
     pred_uc.predicted_mean.plot(ax=ax, color='green', label='Forecast')
     ax.set_xlabel('Date')
     ax.set_ylabel('CAD price')
+    ax.patch.set_facecolor('white')
+    #plt.style.use('ggplot')
     plt.legend()
     with st.expander("Wanna see (All time graph + predicted graph)"):
         st.pyplot(plt, use_container_width=True)
