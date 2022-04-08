@@ -1,6 +1,7 @@
 import streamlit as st
 import yfinance as yf
 import plotly.graph_objs as go
+import base64
 
 def get_bit_info():
     st.header("Bitcoin")
@@ -87,3 +88,18 @@ def get_bit_info():
     )
     st.header("Bitcoin All time graph")
     st.plotly_chart(fig, use_container_width=True)
+
+    with open("bitcoin.pdf", "rb") as file:
+        btn=st.download_button(
+        label="download white paper",
+        data=file,
+        file_name="bitcoin.pdf",
+        mime="application/octet-stream")
+
+    def show_pdf(file_path):
+        with open(file_path, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        pdf_display = f'<iframe src="bitcoin/pdf;base64,{base64_pdf}" width="800" height="800" type="bitcoin/pdf"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+
+    show_pdf('bitcoin.pdf')
