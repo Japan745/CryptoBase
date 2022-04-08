@@ -27,7 +27,8 @@ def get_prediction():
             return None
         return r.json()
 
-    lottie_url = "https://assets3.lottiefiles.com/private_files/lf30_h4qnjuax.json"
+    lottie_url = "https://assets1.lottiefiles.com/private_files/lf30_h4qnjuax.json"
+    #https://assets8.lottiefiles.com/packages/lf20_ZQqYEY.json
     lottie_json = load_lottieurl(lottie_url)
 
     st.warning(
