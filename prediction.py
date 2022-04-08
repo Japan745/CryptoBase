@@ -32,7 +32,8 @@ def get_prediction():
     lottie_json = load_lottieurl(lottie_url)
 
     st.warning(
-        "NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your reference so it doesn't guarantee future exact values."
+        "NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your "
+        "reference only, it doesn't guarantee future exact values."
         "Please do a research before taking any further decision based on this forecasted values.")
 
     with st.form(key='my_form'):
@@ -40,8 +41,8 @@ def get_prediction():
                               ['Bitcoin (BTC)', 'Ethereum (ETH)', 'Stellar (XLM)', 'Tether (USDT)', 'Bitcoin Cash (BCH)',
                                'Litecoin (LTC)', 'Polkadot (DOT)', 'Dogecoin (DOGE)', 'Cardano (ADA)', 'Shiba Inu (SHIB)'])
         submit_button = st.form_submit_button(label='Submit')
-    st.info("FYI : If you want customized forecasting like ( 3 months, 1 year, etc). Please email us by visiting contact us "
-            "page. Thank you.")
+    st.info("FYI : If you want customized forecasting like ( 1 month, 3 months, 1 year, etc). Please email us by visiting contact us "
+            "page. But remember prediction is more reliable if it's of a shorter duration like a week or two. Thank you.")
     if submit_button:
         if crypto == "Bitcoin (BTC)":
             with st_lottie_spinner(lottie_json):

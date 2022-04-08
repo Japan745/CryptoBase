@@ -28,7 +28,8 @@ def trading_tips():
     lottie_url = "https://assets3.lottiefiles.com/private_files/lf30_h4qnjuax.json"
     lottie_json = load_lottieurl(lottie_url)
 
-    st.warning("NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your reference so it doesn't guarantee future exact values."
+    st.warning("NOTE :-  The Predicted values of cryptocurrencies are forecasted by machine learning algorithm and are for your "
+               "reference only, it doesn't guarantee future exact values."
                "Please do a research before taking any further decision based on this forecasted values.")
 
     with st.form(key='my_form'):
