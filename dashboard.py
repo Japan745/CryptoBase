@@ -8,7 +8,7 @@ import prediction
 import streamlit as st
 from streamlit_option_menu import option_menu
 from  PIL import Image
-im = Image.open("images/c_logo.jpg")
+
 st.set_page_config(
     page_title="CryptoBase",
     page_icon="💰",
