@@ -48,11 +48,6 @@ def get_bch_info():
     data = yf.download("BCH-CAD")
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=list(data.index), y=list(data['Adj Close']), line=dict(color="#76D714")))
-    '''fig.add_trace(go.Candlestick(x=data.index,
-                                 open=data['Open'],
-                                 high=data['High'],
-                                 low=data['Low'],
-                                 close=data['Close'], name='market data'))'''
     fig.update_layout(
                       xaxis_title="Date",
                       yaxis_title="P rice in Canadian dollar", )

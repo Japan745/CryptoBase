@@ -1,89 +1,50 @@
-from tkinter import Image
-from PIL import Image
-import streamlit as st
-from streamlit_option_menu import option_menu
-import streamlit.components.v1 as html
-from  PIL import Image
-import numpy as np
-import cv2
-import pandas as pd
-from st_aggrid import AgGrid
-import plotly.express as px
-import io 
-import streamlit as st
-from streamlit_option_menu import option_menu
 import contactus
 import About_us
 import basic_info
 import home
 import trading_tips
 import live_pricing
-#<<<<<<< HEAD
-#=======
 import prediction
-base = "dark"
-#>>>>>>> b7ad90615381c4fe15093a0c6eee59ba0303b01d
-
-
-base = "dark"
-im = Image.open("images/ravi.jpg")
+import streamlit as st
+from streamlit_option_menu import option_menu
+from  PIL import Image
+im = Image.open("images/c_logo.jpg")
 st.set_page_config(
-    # page_title="Ex-stream-ly Cool App",
-    page_icon=im,
+    page_title="CryptoBase",
+    page_icon="💰",
     layout="wide",
-    initial_sidebar_state="auto",
-    # initial_sidebar_state="expanded",
-    # menu_items={
-    #     'Get Help': 'https://www.extremelycoolapp.com/help',
-    #    'Report a bug': "https://www.extremelycoolapp.com/bug",
-    #    'About': "# This is a header. This is an extremely cool app!"
-    # }
-)
+    initial_sidebar_state="auto",)
 
-
-# with st.sidebar:
-# st.title('Home')
-# st.subheader('Prediction')
-#st.subheader('Live price')
-# st.subheader('Comparison')
-#st.subheader('Crypto Info')
-#st.subheader('Contact Us')
+st.markdown("<center><h1 Style=\"overflow: visible; padding-bottom: 50px; padding-top: 0px;\">CryptoBase </h1></center>", unsafe_allow_html=True)
+#st.caption("v 1.0.0")
 selected = option_menu(
-
-
-    menu_title=None,
-
-    orientation="horizontal",
-
-    options=["Home", "Live pricing", "Basic Info", "Prediction",
-             "Trading tips", "About Us", "Contact us"],
-    default_index=0
+        menu_title=None,
+        options=["Home", "Live pricing", "Basic Info", "Prediction", "Trading tips","About Us","Contact us"],
+        icons=['house', 'activity', 'info', 'book','app-indicator','person lines fill','mailbox'],
+        default_index=0,
+        orientation = "horizontal",
+        styles={
+        "container": {"padding": "5!important", "background-color": "white"},
+        "icon": {"color": "#2ECC71", "font-size": "25px"},
+        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "light-grey"},
+        "nav-link-selected": {"background-color": "#2ECC71"},
+}
 )
 
 if selected == "Home":
-    #home.home()
-    st.title("This is home page")
+    home.get_home()
 elif selected == "Live pricing":
     live_pricing.live_price()
-    #st.title("This is live pricing section")
 elif selected == "Basic Info":
     basic_info.get_basic_info()
 elif selected == "Prediction":
     prediction.get_prediction()
 elif selected == "Trading tips":
     trading_tips.trading_tips()
-    #st.title("This is trading tips pAGE")
 elif selected == "About Us":
      About_us.aus()
 elif selected == "Contact us":
     contactus.callus()
-
-    def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-    local_css("dashboard")
 
 hide_menu_style = """
         <style>
@@ -91,5 +52,6 @@ hide_menu_style = """
         footer {visibility: hidden;}
         </style>
         """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
 
+
+st.markdown(hide_menu_style, unsafe_allow_html=True)

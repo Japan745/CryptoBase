@@ -20,12 +20,6 @@ def live_price():
     lottie_url = "https://assets3.lottiefiles.com/private_files/lf30_h4qnjuax.json"
     lottie_json = load_lottieurl(lottie_url)
 
-    '''with st_lottie_spinner(lottie_json):
-        time.sleep(5)
-        st.balloons()'''
-
-
-
     def get_crypto_price(cryptocurrency, currency):
         return cryptocompare.get_price(cryptocurrency, currency)[cryptocurrency][currency]
 

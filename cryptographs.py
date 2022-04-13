@@ -1,4 +1,4 @@
-import plotly.graph_objs as go
+
 import yfinance as yf
 import streamlit as st
 import matplotlib.pyplot as plt
@@ -14,8 +14,6 @@ def get_dot_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (20, 10)
-
     st.pyplot(plt)
     plt.cla()
 
@@ -27,7 +25,6 @@ def get_btc_graph():
         plt.plot(data.index,data['Close'],color="green",linewidth=3.0)
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
-    #plt.rcParams["figure.figsize"] = (15, 4)
     plt.axis('off')
     st.pyplot(plt,use_container_width=True)
     plt.cla()
@@ -40,7 +37,6 @@ def get_eth_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt,use_container_width=True)
     plt.cla()
 
@@ -52,7 +48,6 @@ def get_ltc_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -64,7 +59,6 @@ def get_xlm_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -76,7 +70,6 @@ def get_doge_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -88,7 +81,6 @@ def get_bch_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -100,7 +92,6 @@ def get_ada_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -112,7 +103,6 @@ def get_shib_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
 
@@ -124,6 +114,5 @@ def get_usdt_graph():
     else:
         plt.plot(data.index, data['Close'], color="red",linewidth=3.0)
     plt.axis('off')
-    #plt.rcParams["figure.figsize"] = (15, 4)
     st.pyplot(plt)
     plt.cla()
