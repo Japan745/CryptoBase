@@ -20,3 +20,5 @@ weekly and monthly forecasting of crypto coins for better understanding of the n
 
 Happy coding!
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/japan745/cryptobase/main/dashboard.py)
+
