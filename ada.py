@@ -1,4 +1,3 @@
-import base64
 
 import matplotlib.pyplot as plt
 import yfinance as yf
@@ -22,7 +21,7 @@ def get_ada():
             pred_ci = pred.conf_int()
             ax = ada['2018':].plot(label='observed')
             pred.predicted_mean.plot(ax=ax, label='Forecasted', alpha=.2, figsize=(14, 7))
-            pred_uc = resultshigh.get_forecast(steps=180)
+            pred_uc = resultshigh.get_forecast(steps=30)
             pred_ci = pred_uc.conf_int()
             ax = ada.plot(label='observed',color='Grey', figsize=(20, 8))
             One_week_values = pred_uc.predicted_mean[:7]
@@ -46,7 +45,7 @@ def get_ada():
                     st.plotly_chart(fig, use_container_width=True)
 
             #printing 6 months values
-            st.header("6 Months Forecasting")
+            st.header("1 Month Forecasting")
             fig = px.line(x=pred_uc.predicted_mean.index, y=pred_uc.predicted_mean.values,
                           labels={'x': 'Date', 'y': 'Canadian Dollars'}, title="Cardona (ADA) forecasting",
                           markers=True)

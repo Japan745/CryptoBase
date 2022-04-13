@@ -1,13 +1,5 @@
-import pandas as pd
-import pandas_datareader as web
-import datetime as dt
-import numpy as np
 import streamlit as st
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.tools
 from requests import Request, Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 import json
 
 
@@ -42,7 +34,7 @@ def get_home():
                 with cl1:
                         st.write(1)
                 with col1:
-                        st.image("Images/bitcoin-2.png")
+                        st.image("Images/bitcoin.png")
                 with col2:
                         st.metric(label='Bitcoin BTC ', value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col3:
@@ -69,10 +61,9 @@ def get_home():
                 cl2,col5, col6, col7,col8,g2 = st.columns([0.5,1.5,2,2,2,1.5])
 
                 with cl2:
-                        #cryptographs.get_eth_graph()
                         st.write(2)
                 with col5:
-                        st.image("Images/img/ethereum.png")
+                        st.image("Images/ethereum.png")
                 with col6:
                         st.metric(label="Ethereum (ETH)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col7:
@@ -101,7 +92,7 @@ def get_home():
                 with cl3:
                         st.write(3)
                 with col9:
-                        st.image("Images/img/xlmcoin.png")
+                        st.image("Images/xlmcoin.png")
                 with col10:
                         st.metric(label="Stellar (XLM)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col11:
@@ -130,7 +121,7 @@ def get_home():
                 with cl4:
                         st.write(4)
                 with col13:
-                        st.image("Images/img/usdtcoin.png")
+                        st.image("Images/usdtcoin.png")
                 with col14:
                         st.metric(label="Tether (USDT)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col15:
@@ -159,7 +150,7 @@ def get_home():
                 with cl5:
                         st.write(5)
                 with col17:
-                        st.image("Images/img/bshcoin.png")
+                        st.image("Images/bshcoin.png")
                 with col18:
                         st.metric(label="Bitcoin cash (BCH)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col19:
@@ -188,7 +179,7 @@ def get_home():
                 with cl6:
                         st.write(6)
                 with col21:
-                        st.image("Images/img/litecoin.png")
+                        st.image("Images/litecoin.png")
                 with col22:
                         st.metric(label="Litecoin (LTC)", value=("$"+str(round(price, 2))),delta=str(round(hour24, 2)) + "%")
                 with col23:
@@ -217,7 +208,7 @@ def get_home():
                 with cl7:
                         st.write(7)
                 with col25:
-                        st.image("Images/img/polkadotcoin.png")
+                        st.image("Images/polkadotcoin.png")
                 with col26:
                         st.metric(label="Polkadot (DOT)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col27:
@@ -246,7 +237,7 @@ def get_home():
                 with cl8:
                         st.write(8)
                 with col29:
-                        st.image("Images/img/dogecoin.png")
+                        st.image("Images/dogecoin.png")
                 with col30:
                         st.metric(label="Dogecoin (DOGE)", value=("$"+str(round(price, 2))), delta=str(round(hour24, 2)) + "%")
                 with col31:
@@ -276,7 +267,7 @@ def get_home():
                 with cl9:
                         st.write(9)
                 with col33:
-                        st.image("Images/img/adacoin.png")
+                        st.image("Images/adacoin.png")
                 with col34:
                         st.metric(label="Cardano (ADA)", value=("$"+str(round(price, 2))),delta=str(round(hour24, 2)) + "%")
                 with col35:
@@ -306,9 +297,7 @@ def get_home():
                 with cl10:
                         st.write(10)
                 with col37:
-                        #st.metric(label="Shiba Inu (SHIB)", value=str(st.image("Images/img/shibacoin.png")), delta="SHIB-CAD")
-                        #st.subheader("Shiba Inu (SHIB)")
-                        st.image("Images/img/shibacoin.png")
+                        st.image("Images/shibacoin.png")
                 with col38:
                         st.metric(label="Shiba Inu (SHIB)", value=("$"+str(round(price,5))), delta=str(round(hour24, 2)) + "%")
                 with col39:
@@ -318,10 +307,6 @@ def get_home():
                 with g10:
                         st.write("7 days graph")
                         cryptographs.get_shib_graph()
-
-        #col1, col2, col3, = st.columns(3)
-
-        #with col1:
         st.write(" ")
         hide_img_fs = '''
                 <style>
@@ -333,38 +318,22 @@ def get_home():
         st.markdown(hide_img_fs, unsafe_allow_html=True)
         get_btc()
         st.write("---------------------------")
-        #with col2:
         get_eth()
         st.write("---------------------------")
-       # with col3:
         get_xlm()
         st.write("---------------------------")
-       # col4, col5, col6 = st.columns(3)
-
-       # with col4:
         get_usdt()
         st.write("---------------------------")
-       # with col5:
         get_bch()
         st.write("---------------------------")
-        #with col6:
         get_ltc()
         st.write("---------------------------")
-
-        #col7, col8, col9 = st.columns(3)
-
-        #with col7:
         get_dot()
         st.write("---------------------------")
-        #with col8:
         get_doge()
         st.write("---------------------------")
-        #with col9:
         get_ada()
         st.write("---------------------------")
-        #col10,col11 = st.columns(2)
-
-        #with col10:
         get_shib()
 
 

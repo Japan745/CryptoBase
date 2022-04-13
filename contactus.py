@@ -32,7 +32,7 @@ def callus():
     st.write("    ")
     st.write("    ")
     st.info("Future work")
-    with st.expander("See explanation"):
+    with st.expander("See Details  👁 "):
         st.subheader("Upcoming currencies")
         st.write(1, "  Terra (LUNA)")
         st.write(2, "  Solana (SOL)")

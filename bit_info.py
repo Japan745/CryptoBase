@@ -48,11 +48,6 @@ def get_bit_info():
     data = yf.download("BTC-CAD")
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=list(data.index), y=list(data['Adj Close']), line=dict(color="#76D714")))
-    '''fig.add_trace(go.Candlestick(x=data.index,
-                                 open=data['Open'],
-                                 high=data['High'],
-                                 low=data['Low'],
-                                 close=data['Close'], name='market data'))'''
     fig.update_layout(
                       xaxis_title="Date",
                       yaxis_title="P rice in Canadian dollar", )
@@ -103,18 +98,9 @@ def get_bit_info():
     def st_display_pdf(pdf_file):
         with open(pdf_file,"rb") as f:
             base64_pdf=base64.b64encode(f.read()).decode('utf-8')
-        #pdf_display = f'<embed src=”data:application/pdf;base64,{base64_pdf}” width=”700″ height=”1000″ type=”application/pdf”>'
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="800" type="application/pdf"></iframe>'
         st.markdown(pdf_display,unsafe_allow_html=True)
 
 
     with st.expander(" 👁  Bitcoin white paper "):
         st_display_pdf("bitcoin.pdf")
-
-    # def show_pdf(file_path):
-    #     with open(file_path, "rb") as f:
-    #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    #     pdf_display = f'<iframe src="bitcoin/pdf;base64,{base64_pdf}" width="800" height="800" type="bitcoin/pdf"></iframe>'
-    #     st.markdown(pdf_display, unsafe_allow_html=True)
-    #
-    # show_pdf('bitcoin.pdf')

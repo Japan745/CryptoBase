@@ -1,10 +1,4 @@
 import streamlit as st
-import yfinance as yf
-import matplotlib.pyplot as plt
-import plotly.express as px
-import statsmodels.api as sm
-from datetime import datetime
-import time
 import requests
 from streamlit_lottie import st_lottie_spinner
 import ada
@@ -28,7 +22,6 @@ def get_prediction():
         return r.json()
 
     lottie_url = "https://assets1.lottiefiles.com/private_files/lf30_h4qnjuax.json"
-    #https://assets8.lottiefiles.com/packages/lf20_ZQqYEY.json
     lottie_json = load_lottieurl(lottie_url)
 
     st.warning(
@@ -41,7 +34,7 @@ def get_prediction():
                               ['Bitcoin (BTC)', 'Ethereum (ETH)', 'Stellar (XLM)', 'Tether (USDT)', 'Bitcoin Cash (BCH)',
                                'Litecoin (LTC)', 'Polkadot (DOT)', 'Dogecoin (DOGE)', 'Cardano (ADA)', 'Shiba Inu (SHIB)'])
         submit_button = st.form_submit_button(label='Submit')
-    st.info("FYI : If you want customized forecasting like ( 1 month, 3 months, 1 year, etc). Please email us by visiting contact us "
+    st.info("FYI : If you want customized forecasting like ( 3 months, 6 months, 1 year, etc). Please email us by visiting contact us "
             "page. But remember prediction is more reliable if it's of a shorter duration like a week or two. Thank you.")
     if submit_button:
         if crypto == "Bitcoin (BTC)":

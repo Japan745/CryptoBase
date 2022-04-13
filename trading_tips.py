@@ -1,10 +1,7 @@
-import plotly.graph_objs as go
-import yfinance as yf
+
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie_spinner
-import pandas as pd
-
 import ada_trading
 import bch_trading
 import bit_trading

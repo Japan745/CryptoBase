@@ -20,7 +20,7 @@ def get_shib():
             pred_ci = pred.conf_int()
             ax = SHIB['2020':].plot(label='observed')
             pred.predicted_mean.plot(ax=ax, label='Forecasted', alpha=.2, figsize=(14, 7))
-            pred_uc = resultshigh.get_forecast(steps=180)
+            pred_uc = resultshigh.get_forecast(steps=30)
             pred_ci = pred_uc.conf_int()
             ax = SHIB.plot(label='observed',color='Grey', figsize=(20, 8))
             One_week_values = pred_uc.predicted_mean[:7]
@@ -30,7 +30,6 @@ def get_shib():
             ax.set_ylabel('CAD price')
             ax.patch.set_facecolor('white')
             plt.legend()
-            #space = st.pyplot
             with st.expander(" 👁 (All time graph + predicted graph)"):
                 st.pyplot(plt, use_container_width=True)
 
@@ -43,7 +42,7 @@ def get_shib():
             with st.expander(" 👁 ", True):
                     st.plotly_chart(fig, use_container_width=True)
             #printing 6 months values
-            st.header("6 Months Forecasting")
+            st.header("1 Month Forecasting")
             fig = px.line(x=pred_uc.predicted_mean.index, y=pred_uc.predicted_mean.values,
                           labels={'x': 'Date', 'y': 'Canadian Dollars'}, title="Shiba Inu Coin  (SHIB) forecasting",
                           markers=True)
