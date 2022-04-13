@@ -5,3 +5,5 @@ plotly==5.7.0
 matplotlib==3.5.1
 numpy==1.21.6
 streamlit-lottie==0.0.3
+cryptocompare
+streamlit-option-menu
