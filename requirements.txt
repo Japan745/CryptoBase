@@ -1,5 +1,5 @@
 yfinance
-numpy==1.22.3
+numpy
 pandas==1.4.2
 plotly_express==0.4.0
 plotly==5.7.0
