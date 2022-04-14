@@ -59,7 +59,7 @@ def live_price():
                 while True:
                     with plot_spot:
                         values.append(get_crypto_price('ETH', 'CAD'))
-                        times.append(datetime.now())
+                        times.append(datetime.now(timezone(timezoneca)))
                         fig.data[0].x = times
                         fig.data[0].y = values
                         st.plotly_chart(fig, use_container_width=True)
@@ -76,7 +76,7 @@ def live_price():
                 while True:
                     with plot_spot:
                         values.append(get_crypto_price('XLM', 'CAD'))
-                        times.append(datetime.now())
+                        times.append(datetime.now(timezone(timezoneca)))
                         fig.data[0].x = times
                         fig.data[0].y = values
                         st.plotly_chart(fig, use_container_width=True)
@@ -93,7 +93,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('USDT', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -110,7 +110,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('BCH', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -127,7 +127,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('LTC', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -144,7 +144,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('DOT', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -161,7 +161,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('DOGE', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -178,7 +178,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price('ADA', 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
@@ -195,7 +195,7 @@ def live_price():
             while True:
                 with plot_spot:
                     values.append(get_crypto_price("SHIB", 'CAD'))
-                    times.append(datetime.now())
+                    times.append(datetime.now(timezone(timezoneca)))
                     fig.data[0].x = times
                     fig.data[0].y = values
                     st.plotly_chart(fig, use_container_width=True)
