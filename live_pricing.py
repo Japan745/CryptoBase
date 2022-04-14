@@ -6,11 +6,12 @@ from datetime import datetime
 import plotly.graph_objects as go
 import requests
 from streamlit_lottie import st_lottie_spinner
+from pytz import timezone
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 def live_price():
 
-
+    timezoneca = 'America/New_York'
     def load_lottieurl(url: str):
         r = requests.get(url)
         if r.status_code != 200:
@@ -41,7 +42,7 @@ def live_price():
             while True:
                 with plot_spot:
                         values.append(get_crypto_price('BTC', 'CAD'))
-                        times.append(datetime.now())
+                        times.append(datetime.now(timezone(timezoneca)))
                         fig.data[0].x = times
                         fig.data[0].y = values
                         st.plotly_chart(fig, use_container_width=True)
