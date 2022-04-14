@@ -11,7 +11,7 @@ from pytz import timezone
 st.set_option('deprecation.showPyplotGlobalUse', False)
 def live_price():
 
-    timezoneca = "EST"
+    timezoneca = "Canada/Eastern"
     def load_lottieurl(url: str):
         r = requests.get(url)
         if r.status_code != 200:
